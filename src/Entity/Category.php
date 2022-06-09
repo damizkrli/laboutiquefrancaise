@@ -6,7 +6,7 @@ use App\Repository\CatgeoryRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: CatgeoryRepository::class)]
-class Catgeory
+class Category
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
