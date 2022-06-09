@@ -14,19 +14,19 @@ class Product
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $name;
+    private ?string $name;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $slug;
+    private ?string $slug;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $illustration;
+    private ?string $illustration;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $subtitle;
+    private ?string $subtitle;
 
     #[ORM\Column(type: 'text')]
-    private $description;
+    private ?string $description;
 
     #[ORM\Column(type: 'float')]
     private $price;
