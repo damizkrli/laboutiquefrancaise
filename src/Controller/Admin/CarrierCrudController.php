@@ -5,7 +5,6 @@ namespace App\Controller\Admin;
 use App\Entity\Carrier;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\TextareaField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class CarrierCrudController extends AbstractCrudController
@@ -15,12 +14,14 @@ class CarrierCrudController extends AbstractCrudController
         return Carrier::class;
     }
 
+
     public function configureFields(string $pageName): iterable
     {
         return [
-            TextField::new('name', 'Société'),
-            TextField::new('description', 'Qui sont-ils ?'),
-            MoneyField::new('price' , 'Prix')->setCurrency('EUR')
+            TextField::new('name', 'Nom de la Société'),
+            TextField::new('description', 'Qui sont-ils'),
+            MoneyField::new('price', 'Prix')->setCurrency('EUR')
         ];
     }
+
 }

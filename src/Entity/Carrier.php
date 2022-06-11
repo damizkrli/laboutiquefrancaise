@@ -17,7 +17,7 @@ class Carrier
     private $name;
 
     #[ORM\Column(type: 'text')]
-    private ?string $description;
+    private $description;
 
     #[ORM\Column(type: 'float')]
     private $price;
