@@ -17,10 +17,15 @@ class Carrier
     private $name;
 
     #[ORM\Column(type: 'text')]
-    private $description;
+    private ?string $description;
 
     #[ORM\Column(type: 'float')]
-    private $price;
+    private ?float $price;
+
+    public function __toString(): string
+    {
+        return $this->getName().'[br]'.$this->getDescription().'[br]'.number_format($this->getPrice(), 2, ',', ',').' €';
+    }
 
     public function getId(): ?int
     {
